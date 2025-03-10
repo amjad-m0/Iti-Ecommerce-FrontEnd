@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Dashboard</title>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      padding: 20px;
+    }
+    h2 {
+      color: #333;
+      text-align: center;
+    }
+    .category {
+      margin-bottom: 40px;
+    }
+    .subcategory {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .subcategory h3 {
+      font-size: 24px;
+      color: #444;
+      margin-bottom: 10px;
+    }
+    .product {
+      display: flex;
+      align-items:center;
+      justify-content:flex-start;
+      margin-bottom: 15px;
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+      color: inherit;
+    }
+    .product img {
+      max-width: 100px;
+      border-radius: 8px;
+    }
+    .product div{
+      display: flex;
+      flex-direction: column;
+      margin-left: 300px;
+    }
+    .product h4 {
+      font-size: 18px;
+      color: #a63f5e;
+    }
+    .product p {
+      color: #a63f5e;
+    }
+    .best-seller {
+      background-color: #a63f5e;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-left: 200px;
+    }
+    .form-control {
+      width: 250px;
+    }
+    .add-product-form {
+      margin: 20px 0;
+    }
+    .myColor, h4,h3,h2
+   {
+    color: #a63f5e;
+    
+   }
+   .myBColor
+   {
+    background-color: #a63f5e;
+   }
+   #searchBar
+   {
+    margin-top: 31px;
+   }
+   @media screen and (min-width: 768px) and (max-width: 1024px){
+    .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    }
+    .col-md-12 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    
+    #productForm input, #productForm select, #productForm label {
+      font-size: 14px;
+    }
+    
+    #productForm .row.g-2 > div {
+      margin-bottom: 10px;
+    }
+    
+    #productForm .btn {
+      width: 100%;
+    }
+    
+    #productBestSeller {
+      margin-right: 5px;
+    }
+    
+    #productForm {
+      padding: 20px;
+    }
+   }
+   @media screen and (max-width: 768px) {
+    .product {
+      flex-direction: column;
+    }
+    .product div {
+      margin-left: 0;
+    }
+    .best-seller {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+    .product img {
+      max-width: 80px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .product {
+      padding: 5px;
+    }
+    .product img {
+      max-width: 60px;
+    }
+    .best-seller {
+      font-size: 12px;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center myColor">Seller Dashboard</h1>
+
+    <!-- Filters and Search -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <label for="subcategoryFilter" class="form-label myColor">Filter by Subcategory</label>
+        <select id="subcategoryFilter" class="form-select">
+          <option value="">All Subcategories</option>
+        </select>
+      </div>
+      <div class="col-md-6  p-0">
+        <input type="text" id="searchBar" class="form-control" placeholder="Search products...">
+      </div>
+    </div>
+
+    <!-- Add Product Form -->
+    <div class="mb-4">
+      <h3 class="myColor">Add/Edit Product</h3>
+      <form id="productForm">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <input type="text" id="productName" class="form-control" placeholder="Product Name" required>
+          </div>
+          <div class="col-md-4">
+            <input type="number" id="productPrice" class="form-control" placeholder="Price" required>
+          </div>
+          <div class="col-md-4">
+            <input type="number" id="productStock" class="form-control" placeholder="Stock" required>
+          </div>
+          <div class="col-md-4">
+            <label for="productSubcategory" class="form-label myColor">Product Subcategory</label>
+            <select id="productSubcategory" class="form-select" required>
+              <option value="">Select Subcategory</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <input type="url" id="productImage" class="form-control" placeholder="Image URL" required>
+          </div>
+          <div class="col-md-4">
+            <div class="form-check">
+              <input type="checkbox" id="productBestSeller" class="form-check-input">
+              <label for="productBestSeller" class="form-check-label myColor">Best Seller</label>
+            </div>
+          </div>
+          <div class="col-md-12 text-end">
+            <button type="submit" class="btn text-white myBColor">Save Product</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Dashboard Display -->
+    <div id="dashboard" class="row g-4"></div>
+
+    <!-- Logout Button -->
+    <div class="text-end mt-4">
+      <button id="logoutButton" class="btn text-white myBColor">Log Out</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module">
+    import { deleteItemById, getValueByKey, saveValueByKey } from './localstorage.js';
+
+    document.getElementById('productForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('productName').value;
+      const price = parseFloat(document.getElementById('productPrice').value);
+      const stock = parseInt(document.getElementById('productStock').value);
+      const subCategoryId = document.getElementById('productSubcategory').value;
+      const imgSource = document.getElementById('productImage').value;
+      const bestSeller = document.getElementById('productBestSeller').checked;
+      const sellerId = localStorage.getItem('sellerId'); // Get seller ID
+
+      const newProduct = {
+        productId: Date.now().toString(),
+        name,
+        price,
+        numOfStock: stock,
+        subCategoryId,
+        imgSource,
+        bestSeller,
+        sellerId // Add seller ID to product
+      };
+
+      let products = getValueByKey('products') || [];
+      const existingProductIndex = products.findIndex(product => product.name === name);
+
+      if (existingProductIndex !== -1) {
+        products[existingProductIndex] = newProduct;
+        alert('Product updated successfully!');
+      } else {
+        products.push(newProduct);
+        alert('Product added successfully!');
+      }
+
+      saveValueByKey('products', products);
+
+      // Update seller's product listings
+      let sellers = getValueByKey('sellers') || [];
+      const sellerIndex = sellers.findIndex(seller => seller.sellerId === sellerId);
+      if (sellerIndex !== -1) {
+        sellers[sellerIndex].productListings.push(newProduct.productId);
+        saveValueByKey('sellers', sellers);
+      }
+
+      e.target.reset();
+      renderDashboard();
+    });
+
+    function renderDashboard() {
+      const dashboard = document.getElementById('dashboard');
+      dashboard.innerHTML = ''; // Clear previous content
+
+      const sellerId = localStorage.getItem('sellerId'); // Get seller ID
+      const seller = getValueByKey('sellers').find(seller => seller.sellerId === sellerId); // Get seller object
+      const sellerProductListings = seller.productListings; // Get product listings of the seller
+
+      let categories = getValueByKey('categories') || [];
+      const sellerCategories = categories.filter(category => {
+        return sellerProductListings.some(productId => {
+          const product = getValueByKey('products').find(product => product.productId === productId);
+          return product && product.categoryId === category.categoryId;
+        });
+      });
+
+      sellerCategories.forEach((category) => {
+        const categorySection = document.createElement('div');
+        categorySection.classList.add('category');
+
+        const categoryHeader = document.createElement('h3');
+        categoryHeader.textContent = category.categoryName;
+        categorySection.appendChild(categoryHeader);
+
+        const subcategories = getValueByKey('subcategories') || [];
+        const filteredSubcategories = subcategories.filter(
+          (sub) => sub.categoryId === category.categoryId
+        );
+        filteredSubcategories.forEach((sub) => {
+          const subCategoryDiv = document.createElement('div');
+          subCategoryDiv.classList.add('subcategory');
+
+          const subCategoryHeader = document.createElement('h4');
+          subCategoryHeader.textContent = sub.subCategoryName;
+          subCategoryDiv.appendChild(subCategoryHeader);
+
+          const products = getValueByKey('products') || [];
+          const filteredProducts = products.filter(
+            (product) => product.subCategoryId === sub.subCategoryId && sellerProductListings.includes(product.productId)
+          );
+
+          filteredProducts.forEach((product) => {
+            const productDiv = document.createElement('a');
+            productDiv.classList.add('product');
+            productDiv.href = `product.html?productId=${product.productId}`;
+
+            productDiv.innerHTML = `
+              <img src="${product.imgSource}" alt="${product.name}" />
+              <div>
+                <h4>${product.name}</h4>
+                <p>${product.desc}</p>
+                <p>Price: $${product.price}</p>
+                <p>Stock: ${product.numOfStock}</p>
+              </div>
+            `;
+            if (product.bestSeller) {
+              const bestSellerTag = document.createElement('span');
+              bestSellerTag.classList.add('best-seller');
+              bestSellerTag.textContent = 'Best Seller';
+              productDiv.appendChild(bestSellerTag);
+            }
+
+            subCategoryDiv.appendChild(productDiv);
+          });
+
+          categorySection.appendChild(subCategoryDiv);
+        });
+
+        dashboard.appendChild(categorySection);
+      });
+    }
+
+    function populateSubcategories() {
+      const subcategoryFilter = document.getElementById('subcategoryFilter');
+      const productSubcategory = document.getElementById('productSubcategory');
+      subcategoryFilter.innerHTML = '<option value="">All Subcategories</option>';
+      productSubcategory.innerHTML = '<option value="">Select Subcategory</option>';
+      const subcategories = getValueByKey('subcategories') || [];
+      subcategories.forEach(subcategory => {
+        const option = `<option value="${subcategory.subCategoryId}">${subcategory.subCategoryName}</option>`;
+        subcategoryFilter.innerHTML += option;
+        productSubcategory.innerHTML += option;
+      });
+    }
+
+    function displayProducts(filter = '') {
+      const dashboard = document.getElementById('dashboard');
+      dashboard.innerHTML = '';
+      const sellerId = localStorage.getItem('sellerId'); // Get seller ID
+      const seller = getValueByKey('sellers').find(seller => seller.sellerId === sellerId); // Get seller object
+      const sellerProductListings = seller.productListings; // Get product listings of the seller
+
+      const products = getValueByKey('products') || [];
+      const filteredProducts = products.filter(product => {
+        return (
+          sellerProductListings.includes(product.productId) &&
+          (!filter || product.subCategoryId == filter) &&
+          product.name.toLowerCase().includes(document.getElementById('searchBar').value.toLowerCase())
+        );
+      });
+      filteredProducts.forEach(product => {
+        const productCard = `
+          <div class="col-md-4">
+            <div class="card">
+              <a href="product.html?productId=${product.productId}" class="text-decoration-none text-dark">
+                <img src="${product.imgSource}" class="card-img-top" alt="${product.name}">
+                <div class="card-body">
+                  <h5 class="card-title">${product.name}</h5>
+                  <p class="card-text">Price: $${product.price}<br>Stock: ${product.numOfStock}</p>
+                  <p><span class="${product.bestSeller ? 'best-seller' : ''}">${product.bestSeller ? 'Best Seller' : ''}</span></p>
+                </div>
+              </a>
+              <button class="btn myBColor text-white btn-sm" onclick="deleteProduct(${product.productId})">Delete</button>
+            </div>
+          </div>
+        `;
+        dashboard.innerHTML += productCard;
+      });
+    }
+
+    function deleteProduct(productId) {
+      if (confirm('Are you sure you want to delete this product?')) {
+        deleteItemById('products', productId);
+        displayProducts();
+      }
+    }
+
+    document.getElementById('subcategoryFilter').addEventListener('change', e => displayProducts(e.target.value));
+    document.getElementById('searchBar').addEventListener('input', () => displayProducts(document.getElementById('subcategoryFilter').value));
+
+    document.addEventListener("DOMContentLoaded", () => {
+      populateSubcategories();
+      renderDashboard();
+    });
+
+    // Logout functionality
+    const logoutButton = document.getElementById('logoutButton');
+
+    if (logoutButton) {
+      logoutButton.addEventListener('click', function() {
+        localStorage.removeItem('isLoggedIn'); // Clear login flag
+        localStorage.removeItem('sellerId'); // Clear seller ID
+        window.location.href = 'auth.html'; // Redirect to login page
+      });
+    }
+
+    // Handle back and forward buttons of the browser
+    window.addEventListener('popstate', function(event) {
+      renderDashboard();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Crumbs</title>
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" href="images/3.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+  <nav class="navbar navbar-expand-lg navbar-light  shadow-sm fixed-top p-2" >
+    <div class="container ">
+        <a class="navbar-brand" href="#" onclick="navigate(event, '/')">
+            <img src="images/8.png" alt="cozy Crumbs" id="logoImg">
+        </a>
+        <button class="navbar-toggler" id="toggleBtn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" id="toggleSpan"></span>
+        </button>
+        <div class="collapse navbar-collapse bg-body" id="navbarNavAltMarkup">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link  ms-3 text-white categoryIcon nav-a" href="#" id="allProducts" onclick="navigate(event, '/allproducts')">
+                    All Products
+                    </a>
+                   
+                </li> 
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle ms-3 text-white categoryIcon nav-a" href="#" role="button" data-bs-toggle="dropdown" onclick="navigate(event, '/category/1')">
+                        <i class="fa-solid fa-bread-slice text-white"></i> Bakery
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li onclick="navigate(event, '/subcategory/11')"><a class="dropdown-item" href="#" >Donuts</a></li>
+                        <li onclick="navigate(event, '/subcategory/13')"><a class="dropdown-item" href="#" >Croissant</a></li>
+                        <li onclick="navigate(event, '/subcategory/12')"><a class="dropdown-item" href="#" >Cinnabon</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown" >
+                    <a class="nav-link dropdown-toggle mx-3 text-white categoryIcon nav-a" href="#" role="button" data-bs-toggle="dropdown" onclick="navigate(event, '/category/2')">
+                        <i class="fa-solid fa-cake-candles text-white"></i> Cakes
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li onclick="navigate(event, '/subcategory/24')"><a class="dropdown-item" href="#">Fruit Cake</a></li>
+                        <li onclick="navigate(event, '/subcategory/23')"><a class="dropdown-item" href="#">Cheese Cake</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown" >
+                  <a class="nav-link dropdown-toggle ms-3 text-white categoryIcon nav-a" href="#" role="button" data-bs-toggle="dropdown" onclick="navigate(event, '/category/3')">
+                      <i class="fa-solid fa-mug-hot text-white"></i> Drinks
+                  </a>
+                  <ul class="dropdown-menu ">
+                      <li onclick="navigate(event, '/subcategory/31')"><a class="dropdown-item" href="#">Hot Drinks</a></li>
+                      <li onclick="navigate(event, '/subcategory/32')"><a class="dropdown-item" href="#">Cold Drinks</a></li>
+                  </ul>
+              </li>
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" id="roma" type="search" placeholder="Search" aria-label="Search" onclick="navigate(event, '/search')">
+                </form>             
+                <li onclick="navigate(event, '/favourite')" class="nav-item"><a class="nav-link " href="#" ><i class="fa-regular fa-heart text-white"></i></a></li>
+                <li onclick="navigate(event, '/cart')" class="nav-item position-relative"><a class="nav-link " href="#"><i class="fa-solid fa-cart-plus text-white"></i></a><span class="badge d-none" id="badge">0</span></li>
+                    <li class="nav-item dropdown" >
+                        <a class="nav-link dropdown-toggle ms-3 text-white" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-user text-white "></i>
+                        </a>
+                        <ul class="dropdown-menu ">
+                            <li><a class="dropdown-item" href="/auth.html">Login</a></li>
+                            <li onclick="navigate(event, '/profile')"><a class="dropdown-item" href="#">Profile</a></li>
+                        </ul>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="content " id="content">
+ 
+</div>
+
+<!-- div instead of alert -->
+<div id="notification" class="notification">
+    <span id="notification-message"></span>
+</div>
+
+<footer id="footer" class="py-4 px-5">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p class="text-white">
+                <i class="fas fa-map-marker-alt text-white"></i> Address: 123 Alexandria, Sugarilo City<br>
+                <i class="fas fa-phone text-white"></i> Phone: 123 456 78910<br>
+                <i class="fas fa-envelope text-white"></i> Email: suagarinapastry@gmail.com
+            </p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f text-white"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter text-white"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram text-white"></i></a>
+            </div>
+        </div>
+
+        
+        <div class="footer-section">
+            <h4>Our Categories</h4>
+            <ul>
+                <li onclick="navigate(event, '/category/2')" class="categoryIcon"><a href="#"><i class="fas fa-cake text-white "></i> Cakes</a></li>
+                <li onclick="navigate(event, '/category/1')"class="categoryIcon"><a href="#"><i class="fas fa-bread-slice text-white"></i> Bakery</a></li>
+                <li onclick="navigate(event, '/category/3')"class="categoryIcon"><a href="#"><i class="fas fa-coffee text-white"></i> Drinks</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Find Us</h4>
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <div class="footer-bottom mt-2">
+        &copy; 2024 Sugarina. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </div>
+</footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+      <script src="js/macy.js"></script>
+      <script src="js/jquery-3.6.0.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/popper.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

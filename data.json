@@ -1,0 +1,451 @@
+{
+  "categories": [
+    {
+      "categoryId": "1",
+      "categoryName": "Bakery"
+    },
+    {
+      "categoryId": "2",
+      "categoryName": "Cakes"
+    },
+    {
+      "categoryId": "3",
+      "categoryName": "Drinks"
+    }
+  ],
+  "subcategories": [
+      {
+          "subCategoryId": "23",
+          "subCategoryName": "Cheesecakes",
+          "categoryId": "2",
+          "subCategoryImg": "../images/Cheesecakes.jpg"
+        },
+       
+    {  
+      "subCategoryId": "11",
+      "subCategoryName": "Donuts",
+      "categoryId": "1",
+      "subCategoryImg": "../images/Donuts.jpg"
+    },
+    {
+      "subCategoryId": "32",
+      "subCategoryName": "Cold Drinks",
+      "categoryId": "3",
+      "subCategoryImg": "../images/Cold Drinks.jpg"
+    },
+    {
+      "subCategoryId": "12",
+      "subCategoryName": "Cinnabons",
+      "categoryId": "1",
+      "subCategoryImg": "../images/Cinnabons.jpg"
+    },
+   
+    {
+      "subCategoryId": "24",
+      "subCategoryName": "Fruit Cakes",
+      "categoryId": "2",
+      "subCategoryImg": "../images/Fruit Cakes.jpg"
+    },
+    
+    {
+      "subCategoryId": "31",
+      "subCategoryName": "Hot Drinks",
+      "categoryId": "3",
+      "subCategoryImg": "../images/Hot Drinks.jpg"
+    }, {
+      "subCategoryId": "13",
+      "subCategoryName": "Croissants",
+      "categoryId": "1",
+      "subCategoryImg": "../images/Croissants.jpg"
+    }
+  ],
+  "products": [
+   
+    {
+      "productId": "112",
+      "name": "Glazed Donut",
+      "price": "45",
+      "numOfStock": "5",
+      "imgSource": "../images/Glazed Donut.jpeg",
+      "bestSeller": false,
+      "desc": "Classic glazed donut",
+      "categoryId": "1",
+      "subCategoryId": "11",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "113",
+      "name": "Strawberry Donut",
+      "price": "55",
+      "numOfStock": "7",
+      "imgSource": "../images/Strawberry Donut.jpeg",
+      "bestSeller": true,
+      "desc": "Sweet strawberry donut",
+      "categoryId": "1",
+      "subCategoryId": "11",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "111",
+      "name": "Chocolate Donut",
+      "price": "50",
+      "numOfStock": "10",
+      "imgSource": "../images/Chocolate Donut.webp",
+      "bestSeller": true,
+      "desc": "Rich chocolate donut",
+      "categoryId": "1",
+      "subCategoryId": "11",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "114",
+      "name": "Vanilla Donut",
+      "price": "50",
+      "numOfStock": "5",
+      "imgSource": "../images/Vanilla Donut.jpeg",
+      "bestSeller": false,
+      "desc": "Soft vanilla donut",
+      "categoryId": "1",
+      "subCategoryId": "11",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "115",
+      "name": "Caramel Donut",
+      "price": "60",
+      "numOfStock": "6",
+      "imgSource": "../images/Caramel Donut.jpeg",
+      "bestSeller": true,
+      "desc": "Delicious caramel donut",
+      "categoryId": "1",
+      "subCategoryId": "11",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "121",
+      "name": "Classic Cinnabon",
+      "price": "90",
+      "numOfStock": "6",
+      "imgSource": "../images/Classic Cinnabon.jpeg",
+      "bestSeller": true,
+      "desc": "Soft and sweet classic roll",
+      "categoryId": "1",
+      "subCategoryId": "12",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "122",
+      "name": "Caramel Cinnabon",
+      "price": "100",
+      "numOfStock": "4",
+      "imgSource": "../images/Caramel Cinnabon.jpeg",
+      "bestSeller": true,
+      "desc": "Caramel glazed with pecans",
+      "categoryId": "1",
+      "subCategoryId": "12",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "123",
+      "name": "Mini Cinnabon",
+      "price": "70",
+      "numOfStock": "10",
+      "imgSource": "../images/Mini Cinnabon.jpeg",
+      "bestSeller": false,
+      "desc": "Bite-sized cinnamon roll",
+      "categoryId": "1",
+      "subCategoryId": "12",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "124",
+      "name": "Chocolate Cinnabon",
+      "price": "95",
+      "numOfStock": "3",
+      "imgSource": "../images/Chocolate Cinnabon.jpeg",
+      "bestSeller": true,
+      "desc": "Chocolate infused roll",
+      "categoryId": "1",
+      "subCategoryId": "12",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "125",
+      "name": "Apple Cinnabon",
+      "price": "85",
+      "numOfStock": "5",
+      "imgSource": "../images/Apple Cinnabon.jpg",
+      "bestSeller": false,
+      "desc": "Apple cinnamon delight",
+      "categoryId": "1",
+      "subCategoryId": "12",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "131",
+      "name": "Butter Croissant",
+      "price": "35",
+      "numOfStock": "15",
+      "imgSource": "../images/Butter Croissant.jpg",
+      "bestSeller": true,
+      "desc": "Flaky butter croissant",
+      "categoryId": "1",
+      "subCategoryId": "13",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "132",
+      "name": "Chocolate Croissant",
+      "price": "40",
+      "numOfStock": "12",
+      "imgSource": "../images/Chocolate Croissant.jpg",
+      "bestSeller": false,
+      "desc": "Chocolate-filled croissant",
+      "categoryId": "1",
+      "subCategoryId": "13",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "231",
+      "name": "Classic Cheesecake",
+      "price": "50",
+      "numOfStock": "15",
+      "imgSource": "../images/Classic Cheesecake.jpeg",
+      "bestSeller": true,
+      "desc": "Smooth and creamy classic cheesecake",
+      "categoryId": "2",
+      "subCategoryId": "23",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "232",
+      "name": "Blueberry Cheesecake",
+      "price": "55",
+      "numOfStock": "10",
+      "imgSource": "../images/Blueberry Cheesecake.jpeg",
+      "bestSeller": false,
+      "desc": "Delicious cheesecake topped with fresh blueberries",
+      "categoryId": "2",
+      "subCategoryId": "23",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "233",
+      "name": "Strawberry Cheesecake",
+      "price": "60",
+      "numOfStock": "8",
+      "imgSource": "../images/Strawberry Cheesecake.jpeg",
+      "bestSeller": true,
+      "desc": "Rich cheesecake topped with fresh strawberries",
+      "categoryId": "2",
+      "subCategoryId": "23",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "241",
+      "name": "Mixed Cake",
+      "price": "45",
+      "numOfStock": "12",
+      "imgSource": "../images/Mixed Fruit Cake.jpg",
+      "bestSeller": true,
+      "desc": "Delightful cake with a mix of seasonal fruits",
+      "categoryId": "2",
+      "subCategoryId": "24",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "242",
+      "name": "Pineapple Cake",
+      "price": "50",
+      "numOfStock": "9",
+      "imgSource": "../images/Pineapple Cake.jpeg",
+      "bestSeller": false,
+      "desc": "Soft cake layered with pineapple cream",
+      "categoryId": "2",
+      "subCategoryId": "24",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "243",
+      "name": "Berry Cake",
+      "price": "55",
+      "numOfStock": "7",
+      "imgSource": "../images/Berry Delight Cake.jpeg",
+      "bestSeller": true,
+      "desc": "Refreshing cake topped with assorted berries",
+      "categoryId": "2",
+      "subCategoryId": "24",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "311",
+      "name": "Hot Chocolate",
+      "price": "40",
+      "numOfStock": "12",
+      "imgSource": "../images/Hot Chocolate.jpeg",
+      "bestSeller": true,
+      "desc": "Warm and creamy hot chocolate",
+      "categoryId": "3",
+      "subCategoryId": "31",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "312",
+      "name": "Espresso",
+      "price": "30",
+      "numOfStock": "10",
+      "imgSource": "../images/Espresso.jpeg",
+      "bestSeller": false,
+      "desc": "Strong and bold espresso",
+      "categoryId": "3",
+      "subCategoryId": "31",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "313",
+      "name": "Caramel Macchiato",
+      "price": "35",
+      "numOfStock": "8",
+      "imgSource": "../images/Caramel Macchiato.jpeg",
+      "bestSeller": true,
+      "desc": "Smooth and creamy latte",
+      "categoryId": "3",
+      "subCategoryId": "31",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "321",
+      "name": "Mint Mojito",
+      "price": "40",
+      "numOfStock": "12",
+      "imgSource": "../images/Mint Mojito.jpeg",
+      "bestSeller": true,
+      "desc": "Refreshing iced coffee with a bold flavor",
+      "categoryId": "3",
+      "subCategoryId": "32",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "322",
+      "name": "Lemonade",
+      "price": "30",
+      "numOfStock": "10",
+      "imgSource": "../images/Lemonade.png",
+      "bestSeller": false,
+      "desc": "Fresh and tangy lemonade",
+      "categoryId": "3",
+      "subCategoryId": "32",
+      "quantityInCart":"1"
+    },
+    {
+      "productId": "323",
+      "name": "Strawberry Smoothie",
+      "price": "35",
+      "numOfStock": "8",
+      "imgSource": "../images/Strawberry Smoothie.jpeg",
+      "bestSeller": true,
+      "desc": "Chilled iced tea with a hint of lemon",
+      "categoryId": "3",
+      "subCategoryId": "32",
+      "quantityInCart":"1"
+    }
+  ],
+"sellers": [
+  {
+    "sellerId": "1",
+    "name": "John Doe",
+    "email": "john@example.com",
+    "passwordHash": "e06c41888cdd74a5b55fc35e750793f0850d60f5a036c657d7b72725d6112f01",
+    "phone": "01234567890",
+    "city": "city",
+    "district": "district",
+    "address": "address",
+    "businessName": "Bakery",
+    "status": "verified",
+    "productListings": ["111", "112", "113", "114", "115", "121", "122", "123", "124", "125", "131", "132"],
+    "discountOffers": [],
+    "rating": 4.5,
+    "reviewsCount": 30,
+    "salesVolume": 50,
+    "paymentMethod": "COD",
+    "earnings": 12000,
+    "isLoggedIng": false
+  },
+  {
+    "sellerId": "2",
+    "name": "Will Smith",
+    "email": "will@example.com",
+    "passwordHash": "e06c41888cdd74a5b55fc35e750793f0850d60f5a036c657d7b72725d6112f01",
+    "phone": "01234567891",
+    "city": "city",
+    "district": "district",
+    "address": "address",
+    "businessName": "Cakes",
+    "status": "verified",
+    "productListings": ["231", "232", "233", "241", "242", "243"],
+    "discountOffers": [],
+    "rating": 4.5,
+    "reviewsCount": 20,
+    "salesVolume": 40,
+    "paymentMethod": "COD",
+    "earnings": 1000,
+    "isLoggedIng": false
+
+  },
+  {
+    "sellerId": "3",
+    "name": "Adam Foe",
+    "email": "adam@example.com",
+    "passwordHash": "e06c41888cdd74a5b55fc35e750793f0850d60f5a036c657d7b72725d6112f01",
+    "phone": "01234567893",
+    "city": "city",
+    "district": "district",
+    "address": "address",
+    "businessName": "Drinks",
+    "status": "verified",
+    "productListings": ["311", "312", "313", "321", "322", "323"],
+    "discountOffers": [],
+    "rating": 4,
+    "reviewsCount": 10,
+    "salesVolume": 20,
+    "paymentMethod": "COD",
+    "earnings": 9000,
+    "isLoggedIng": false
+
+  }
+],
+"users": [
+  {
+    "userId": "1",
+    "name": "Jane Smith",
+    "email": "jane@example.com",
+    "passwordHash": "e06c41888cdd74a5b55fc35e750793f0850d60f5a036c657d7b72725d6112f01",
+    "city": "city",
+    "district": "district",
+    "address": "address",
+    "phone": "01234567893",
+    "status": "active",
+    "shoppingCart": [],
+    "favourite": [],
+    "cartTotal": 0,
+    "productReviews": [],
+    "averageRating": 3.5,
+    "isLoggedIng": false
+
+  }
+],
+"admins": [
+  {
+    "adminId": "1",
+    "name": "Admin User",
+    "email": "admin@example.com",
+    "passwordHash": "e06c41888cdd74a5b55fc35e750793f0850d60f5a036c657d7b72725d6112f01",
+    "city": "city",
+    "district": "district",
+    "address": "address",
+    "phone": "01234567893",
+    "isLoggedIng": false
+
+  }
+]
+}
