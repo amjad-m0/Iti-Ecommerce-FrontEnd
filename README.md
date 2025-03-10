@@ -1,1 +1,1 @@
-# Iti-Ecommerce-FrontEnd
+# Iti-Ecommerce-FrontEnd: An ecommerce bakery application
